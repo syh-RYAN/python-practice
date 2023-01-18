@@ -1,0 +1,41 @@
+array = [3,5,1,2,4] # 5개의 데이터(N=5)
+summary = 0 #합계를 저장할 변수
+
+# 모든 데이터를 하나씩 확인하며 합계를 계산
+for x in array:
+    summary += x
+
+# 결과를 출력
+print(summary)
+
+a = 5
+b = 7
+print(a+b)
+
+#거스름돈
+def a(money):
+    """
+    거스름돈 계산 하는 거
+    """
+    t = 0
+    coin = [500,100,50,10] # 거스름돈으로 사용할 동전
+    for _ in coin:
+        t+=(money//_) #정수형으로 나눌때 사용되는 연산자 //
+        money %= _ #나누고 난 나머지 값을 표현하는 연산자 %=
+    return t
+print(a(1260))
+
+
+def solution(a, b):
+    answer = 0
+    if a==b :
+        return a or b
+    elif a>b :
+        a,b = b,a  # b가 더 클 경우 더해주기 위해서 
+
+    for i in range(a,b+1):
+        answer +=i
+    return answer
+
+print(solution(5,5))
+
